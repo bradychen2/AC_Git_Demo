@@ -1,0 +1,99 @@
+body{
+  background-color: #000000;
+}
+
+.container{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 100px auto;
+  padding: auto auto;
+  height: 180px ;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Recursive', sans-serif;
+}
+
+h2{
+  padding: 5px 10px;
+  min-width: 100px;
+  text-align: center;
+  background-color: rgba(255,255,255,35%);
+  border-radius: 5%;
+}
+
+input[type="range"]{
+  -webkit-appearance: none;
+  /* overflow:hidden; */
+  width:150px;
+  height:13px;
+  outline : none;
+  background:none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer; /* Mouse cursor change form */
+  margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[id=redSlider]::-webkit-slider-thumb {
+  background: red;
+}
+
+input[id=greenSlider]::-webkit-slider-thumb {
+  background: green;
+}
+
+input[id=blueSlider]::-webkit-slider-thumb {
+  background: blue;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 150px;
+  height: 5px;
+  cursor: pointer;
+  border-radius: 1.3px;
+}
+
+input[id=redSlider]::-webkit-slider-runnable-track {
+  background: rgb(230, 107, 107);
+}
+
+input[id=greenSlider]::-webkit-slider-runnable-track {
+  background: rgb(120, 226, 116);
+}
+
+input[id=blueSlider]::-webkit-slider-runnable-track {
+  background: rgb(100, 98, 224);
+}
+
+#redLabel, #greenLabel, #blueLabel{
+  margin: 2px;
+  padding: 2px 5px;
+  text-align: center;
+  border-radius: 10%;
+}
+
+#redValue, #greenValue, #blueValue{
+  display: inline-block; /* Prevent from size change */
+  padding: 2px 5px;
+  min-width: 30px;
+  text-align: center;
+  border-radius: 10%;
+}
+
+#redValue, #redLabel{
+  background-color: red;
+}
+
+#greenValue, #greenLabel{
+  background-color: green;
+}
+
+#blueValue, #blueLabel{
+  background-color: blue;
+}
